@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.util.Scanner;
 
 import execice1.ArticleStock;
@@ -13,14 +14,21 @@ import main.Utils;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("\033\143");
         System.out.println("Quel exercice ?");
+        correction();
+        System.out.println();
+    }
+
+    private static void correction() {
+        String choice;
         Scanner scanner = new Scanner(System.in);
-        String choice = "";
         do {
             choice = scanner.nextLine();
         } while (!Utils.isNumeric(choice));
 
         int execice = Integer.parseInt(choice);
+        System.out.println();
 
         switch (execice) {
             case 1:
@@ -70,7 +78,6 @@ public class Main {
             default:
                 break;
         }
-
         scanner.close();
     }
 }

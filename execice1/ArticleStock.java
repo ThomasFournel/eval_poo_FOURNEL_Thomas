@@ -1,7 +1,5 @@
 package execice1;
 
-import main.Utils;
-
 public class ArticleStock {
     private final String name;
     private int amount;
