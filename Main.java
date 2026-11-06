@@ -4,6 +4,8 @@ import execice1.ArticleStock;
 import exercice2.ConnectedDevice;
 import exercice2.SecurityCamera;
 import exercice2.Thermostat;
+import exercice3.HotelRoom;
+import exercice3.RentalApartment;
 import main.Utils;
 
 public class Main {
@@ -39,6 +41,17 @@ public class Main {
                 Utils.print("*Diagnostique de la caméra 1* | " + camera.diagnose());
 
                 Utils.print("*Mise en mode éco du thermostat* | " + thermostat.activateEcoMode());
+                break;
+
+            case 3:
+                HotelRoom hotelRoom = new HotelRoom("CH-101", 81, 12.5);
+                RentalApartment rentalApartment = new RentalApartment("APT - 4B", 110, 50);
+
+                Utils.print("*Description de la chamber d'hotel* | " + hotelRoom.describe());
+                Utils.print("*Description de l'apartement locatif* | " + rentalApartment.describe());
+
+                Utils.print("Séjour de 6 nuits dans chamber d'hotel = " + Double.toString(hotelRoom.calculateStayPrice(6)) + "€");
+                Utils.print("Séjour de 6 nuits dans l'apartement locatif = " + Double.toString(rentalApartment.calculateStayPrice(6)) + "€");
                 break;
 
             default:
