@@ -7,6 +7,7 @@ import exercice2.Thermostat;
 import exercice3.HotelRoom;
 import exercice3.RentalApartment;
 import exercice4.Smartphone;
+import exercice5.EventJournal;
 import main.Utils;
 
 public class Main {
@@ -58,6 +59,13 @@ public class Main {
             case 4:
                 Smartphone phone = new Smartphone("Pixel Pro", 5000);
                 Utils.print("*Fiche technique du smartphone* | " + phone.getTechnicalSheet());
+
+            case 5:
+                EventJournal journal1 = EventJournal.getInstance();
+                journal1.setAlertLevel("CRITIQUE");
+                EventJournal journal2 = EventJournal.getInstance();
+                Utils.print("Niveau d'alerte du journal 2 = " + journal2.getAlertLevel());
+                Utils.print("(journal1 == journal2) = " + (journal1 ==journal2 ? "true" : "false") );
 
             default:
                 break;
