@@ -6,6 +6,7 @@ import exercice2.SecurityCamera;
 import exercice2.Thermostat;
 import exercice3.HotelRoom;
 import exercice3.RentalApartment;
+import exercice4.Smartphone;
 import main.Utils;
 
 public class Main {
@@ -53,6 +54,10 @@ public class Main {
                 Utils.print("Séjour de 6 nuits dans chamber d'hotel = " + Double.toString(hotelRoom.calculateStayPrice(6)) + "€");
                 Utils.print("Séjour de 6 nuits dans l'apartement locatif = " + Double.toString(rentalApartment.calculateStayPrice(6)) + "€");
                 break;
+
+            case 4:
+                Smartphone phone = new Smartphone("Pixel Pro", 5000);
+                Utils.print("*Fiche technique du smartphone* | " + phone.getTechnicalSheet());
 
             default:
                 break;
